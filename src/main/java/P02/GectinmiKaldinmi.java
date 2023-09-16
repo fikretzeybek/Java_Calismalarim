@@ -15,5 +15,11 @@ Kullanıcıdan İki adet vize notu ve bir adet final notu girmesini isteyin
  Yıl Sonu Notu:
  Ders Durumu :
   */
+
+
+
+
+
+
     }
 }
