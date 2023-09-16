@@ -18,7 +18,7 @@ public class WhileLoops {
 
         // while loop continues
         // until entered number is positive
-        while (number > 0) {
+        while (number > 0) {//  =0 yazilir ise negatif sayi yazilana kadar dongu devam eder
             // add only positive numbers
             sum += number;
 
