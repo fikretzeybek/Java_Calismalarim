@@ -1,4 +1,4 @@
-package Day1;
+package P01;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

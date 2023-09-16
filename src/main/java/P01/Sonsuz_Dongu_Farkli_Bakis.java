@@ -1,4 +1,4 @@
-package Day1;
+package P01;
 
 public class Sonsuz_Dongu_Farkli_Bakis {
     public static void main(String[] args) {

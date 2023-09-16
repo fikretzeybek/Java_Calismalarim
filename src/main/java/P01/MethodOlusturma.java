@@ -1,4 +1,4 @@
-package Day1;
+package P01;
 
 public class MethodOlusturma {
 

@@ -1,4 +1,4 @@
-package Day2;
+package P02;
 
 public class GectinmiKaldinmi {
     public static void main(String[] args) {

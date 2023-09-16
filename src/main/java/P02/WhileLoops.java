@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class WhileLoops {
     public static void main(String[] args) {
 
+
         // Java program to find the sum of positive numbers
 
         // create an object of Scanner class
