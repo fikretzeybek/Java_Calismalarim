@@ -13,16 +13,16 @@ public class MukemmelSayi {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Lutfen pozitif bir tam sayi giriniz");
         int sayi = scanner.nextInt();
-        int sum = 0;
+        int toplam = 0;
 
         for (int i = 1; i < sayi; i++) {
             if (sayi % i == 0){
-               sum += i;
+               toplam += i;
 
             }
 
         }
-        if (sum == sayi){
+        if (toplam == sayi){
             System.out.println(sayi + " Mukemmel bir sayidir");
         }else {
             System.out.println(sayi +" Mukemmel bir sayi degildir");
