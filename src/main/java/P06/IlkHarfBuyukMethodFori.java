@@ -20,7 +20,7 @@ public class IlkHarfBuyukMethodFori {
         System.out.println(adSoyadIlkHarfiBuyut(adSoyad));
     }
 
-    private static String adSoyadIlkHarfiBuyut(String adSoyad) {
+    public static String adSoyadIlkHarfiBuyut(@org.jetbrains.annotations.NotNull String adSoyad) {
 
         String[] yeniAdSoyad = adSoyad.split(" ");
 
