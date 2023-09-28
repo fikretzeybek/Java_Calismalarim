@@ -21,7 +21,7 @@ public class IlkHarfBuyukMethodStringBuilder {
         System.out.println(adSoyadIlkHarfiBuyut(adSoyad));
     }
 
-    private static String adSoyadIlkHarfiBuyut(String adSoyad) {
+    public static String adSoyadIlkHarfiBuyut(String adSoyad) {
 
         String[] yeniAdSoyad = adSoyad.split(" ");
 
@@ -31,6 +31,8 @@ public class IlkHarfBuyukMethodStringBuilder {
 
             isimParcasi = w.substring(0, 1).toUpperCase() + w.substring(1).toLowerCase();
             yeniad.append(isimParcasi).append(" ");
+
+
         }
 
         return yeniad.toString();

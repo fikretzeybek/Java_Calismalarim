@@ -1,5 +1,8 @@
 package P01;
 
+import P06.IlkHarfBuyukMethodFori;
+import P06.IlkHarfBuyukMethodStringBuilder;
+
 import java.util.Scanner;
 
 public class DataYazdirma2 {
@@ -17,6 +20,7 @@ public class DataYazdirma2 {
         int yas = scanner.nextInt();
 
         System.out.println("Girilen isim : " + ilkHarf + " " +soyIsim + "," + yas );
+
 
 
     }
