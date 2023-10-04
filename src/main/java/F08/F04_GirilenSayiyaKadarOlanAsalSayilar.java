@@ -18,6 +18,7 @@ public class F04_GirilenSayiyaKadarOlanAsalSayilar {
         }
     }
 
+
     // Bir sayının asal olup olmadığını kontrol eden fonksiyon
     public static boolean isAsal(int sayi) {
         if (sayi <= 1) {
