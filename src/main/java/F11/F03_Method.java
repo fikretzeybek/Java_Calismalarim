@@ -1,6 +1,6 @@
 package F11;
 
-public class F03_Static03 {
+public class F03_Method {
 
     static String ad = "Ali Can";
 

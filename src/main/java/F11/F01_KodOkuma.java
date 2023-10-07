@@ -14,6 +14,8 @@ public class F01_KodOkuma {
 
     public F01_KodOkuma(String isim){
         isim="Metin";
+
+
         System.out.println("isim: "+isim);
     }
     public F01_KodOkuma(){

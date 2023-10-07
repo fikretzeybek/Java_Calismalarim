@@ -1,6 +1,6 @@
 package F11;
 
-public class F03_Static04 {
+public class F03_MethoduCagirma {
 
     int num1 = 12;
 
@@ -8,9 +8,9 @@ public class F03_Static04 {
 
     public static void main(String[] args) {
 
-        F03_Static03.artirma();
+        F03_Method.artirma();
 
-        F03_Static03 obj = new F03_Static03();
+        F03_Method obj = new F03_Method();
 
         obj.artirma();
 
