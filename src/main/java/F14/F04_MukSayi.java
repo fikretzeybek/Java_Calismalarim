@@ -2,7 +2,7 @@ package F14;
 
 import java.util.Scanner;
 
-public class soru4 {
+public class F04_MukSayi {
     public static void main(String[] args) {
         /*
     Bir sayinin mükemmel olup olmadiğini bulan bir method yaziniz.

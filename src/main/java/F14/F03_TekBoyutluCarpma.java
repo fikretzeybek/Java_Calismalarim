@@ -1,6 +1,6 @@
 package F14;
 
-public class soru3 {
+public class F03_TekBoyutluCarpma {
     public static void main(String[] args) {
         /*
             1 x 1 = 1

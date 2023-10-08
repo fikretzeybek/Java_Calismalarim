@@ -1,6 +1,6 @@
 package F14;
 
-public class soru2 {
+public class F02_BesliSayiMatrisi {
     public static void main(String[] args) {
         /*
         2 boyutlu bir tablo olarak, ekrana çarpım tablosunu hesaplayıp yazan kodu yazınız.

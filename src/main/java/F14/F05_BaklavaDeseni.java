@@ -1,6 +1,6 @@
 package F14;
 
-public class soru5 {
+public class F05_BaklavaDeseni {
     public static void main(String[] args) {
     /*
         Yıldızlar (*) ile baklava deseni oluşturabileceğiniz bir kod yazınız.
