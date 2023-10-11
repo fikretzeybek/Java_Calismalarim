@@ -10,13 +10,19 @@ public class Car {
     int modelYili = 0;
 
 
-    public Car(){}
+     Car(){}
 
-    public Car(String marka){
-        this.marka = marka;
+     Car(String marka){
+
+
+
     }
 
-    public Car(String marka, String model, String renk){}
+     Car(String marka, String model, String renk){
+
+
+    }
+
 
     public Car(String hiz,String yakit){}
 

@@ -6,6 +6,7 @@ public class F03_MyClass {
 
     // Create a class constructor for the MyClass class
     public F03_MyClass() {
+
         x = 5;  // Set the initial value for the class attribute x to 5
     }
 
