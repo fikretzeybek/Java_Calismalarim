@@ -18,14 +18,14 @@ public class Arac {
 
     public Arac(String marka) {// arac4
 
-        this.marka = marka;
+        this.marka = "Fiat";
 
     }
 
     public Arac(String model, int modelYili, String yakit) {
 
         this.model = model;
-        this.modelYili = modelYili;
+        this.modelYili = 2015;
         this.yakit = yakit;
 
 
@@ -35,8 +35,8 @@ public class Arac {
 
         this.marka = marka;
         this.model = model;
-        this.renk = renk;
-        this.modelYili = modelYili;
+        this.renk = "Titan";
+        this.modelYili = 2020;
 
 
     }
