@@ -1,4 +1,4 @@
-package KonuAnlatimi;
+package F21_KonuAnlatimi;
 
 public class Varargs2 {
 
@@ -9,7 +9,7 @@ public class Varargs2 {
         // Not : en uzun kelime olarak birden fazla kelime varsa, ilkini yazdirin
 
         enUzunuYazdir("Ilyas","Berivan","Murat");
-        enUzunuYazdir("Mehmet","Vahit","Nurcan","Java","Zafer","Kerime");
+        enUzunuYazdir("Mehmet","Vahit","Nurcann","Java","Zafer","Kerime","Samet");
     }
 
     private static void enUzunuYazdir(String... kelimeler) {

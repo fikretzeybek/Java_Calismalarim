@@ -1,4 +1,4 @@
-package OrnekSoru1;
+package F22;
 
 import java.util.Arrays;
 
@@ -28,6 +28,7 @@ public class PassByValue {
     }
 
     private static void method1(String str) {
+
         str = str.toUpperCase();
     }
 }

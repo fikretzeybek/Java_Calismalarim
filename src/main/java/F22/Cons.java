@@ -1,4 +1,4 @@
-package OrnekSoru1;
+package F22;
 
 public class Cons {
     public static int length = 0;

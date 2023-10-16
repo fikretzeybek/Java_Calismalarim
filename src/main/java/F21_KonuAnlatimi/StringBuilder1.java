@@ -1,4 +1,4 @@
-package KonuAnlatimi;
+package F21_KonuAnlatimi;
 
 
 public class StringBuilder1 {
@@ -24,8 +24,8 @@ public class StringBuilder1 {
 
         String str = "Hafta";
         str.toUpperCase();
-        System.out.println(str.toUpperCase());
-        System.out.println(str);
+        System.out.println(str.toUpperCase());//HAFTA
+        System.out.println(str);//Hafta
 
         sb2.append("Java");
         System.out.println(sb2); // Java

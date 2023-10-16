@@ -1,4 +1,4 @@
-package F03;
+package F04;
 public class F12_CarpimTablosuAlternatif {
     public static void main(String[] args) {
         int grupBoyutu = 5; // Her grupdaki çarpım sonuçları sayısı

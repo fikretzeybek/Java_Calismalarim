@@ -1,4 +1,4 @@
-package KonuAnlatimi;
+package F21_KonuAnlatimi;
 
 public class StringBuilder2 {
 
@@ -12,27 +12,30 @@ public class StringBuilder2 {
 
         sb.trimToSize();
         // atama yapmadigimiz halde bu degisiklik kalici olur mu ?
-        // StringBuilder mutable oldugundan method'lrla yapilan degiklikler kalici olur
+        // StringBuilder mutable oldugundan method'larla yapilan degiklikler kalici olur
 
         System.out.println(sb.capacity()); // 4
+
+
 
         System.out.println(sb.toString().toUpperCase()); // JAVA
 
         System.out.println(sb); // Java
+
         // StringBuilder'i String'e cevirirseniz veya String dondurecek method'lar kullanirsaniz
         // String'in immutable ozelligi devreye girer ve yapilan degisiklikler kalici olmaz
 
-        // sb= sb.toString().toUpperCase();
+         //sb= sb.toString().toUpperCase();
         // nonprimitive data turlerinde farkli data turunden atama yapamazsiniz
 
         // Short sayi1= 20;
         // Integer sayi2= sayi1;
 
-
+        //new StringBuilder(sb.toString().toUpperCase());
         StringBuilder sb2= new StringBuilder(sb.toString().toUpperCase());
         System.out.println(sb2); // JAVA
 
-        sb= sb2;
+        sb= sb2;//String StringBuilder'e cevrildiginden istenilen manipulation yapilabilir
 
         System.out.println(sb); // JAVA
 

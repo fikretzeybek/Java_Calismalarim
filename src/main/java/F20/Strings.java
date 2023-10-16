@@ -1,4 +1,4 @@
-package SerbestCalisma;
+package F20;
 
 public class Strings {
     public static void main(String[] args) {

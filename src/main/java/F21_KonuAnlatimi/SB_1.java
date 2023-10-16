@@ -1,14 +1,16 @@
-package KonuAnlatimi;
+package F21_KonuAnlatimi;
 
 public class SB_1 {
     public static void main(String[] args) {
 
          /*
         1) "StringBuilder" classi da String ureten bir classtir.
-        2) String class kullanarak String üretiriz, java nicin StringBuilder classi da olusturdu?
+        2) String class kullanarak String üretiriz,
+            java nicin StringBuilder classi da olusturdu?
             String class "immutable" (degistirilemez) string uretir,
             StringBuilder Class "mutable"(degistirilebilir) string üretir.
-        3) "immutable" olmak demek orjinal degerin korunmasi, değistirilemez olmasi demektir
+        3) "immutable" olmak demek orjinal degerin korunmasi,
+            değistirilemez olmasi demektir
             "mutable" olmak demek orjinal degerin değistirilebilir olmasi demektir
          */
 
@@ -16,22 +18,25 @@ public class SB_1 {
         String s = "Java";
         String t = s + "!";
         String w = t + "?";
+        //System.out.println(s);// Java!?
 
         /*
-        String i degistirdikten sonra ayni stringe assign ederseniz java yine yeni bir container olusturur
-        degismis degeri bu yeni containerin icine koyar ve eski container i gosteren pointer
-        yeni container a yonlendirilir dolayisiyla eski container adressiz kalir
-        ve "Garbage Collector" adressiz olan containerlari siler
+        String i degistirdikten sonra ayni stringe assign ederseniz java
+         yine yeni bir container olusturur degismis degeri bu yeni containerin icine
+         koyar ve eski container i gosteren pointer yeni container a yonlendirilir
+         dolayisiyla eski container adressiz kalir ve "Garbage Collector"
+         adressiz olan containerlari siler
          */
 
         String a = "Money";
-        a = a + "  More";
+        a = a + " More";
+        //System.out.println(a);
 
 
         //Mutable
         StringBuilder sb1 = new StringBuilder("Python");
         sb1.append("!");
-        System.out.println(sb1);//Python
+        //System.out.println(sb1);
 
         //StringBuilder olusturmanin ikinci yolu
         StringBuilder sb2 = new StringBuilder();
@@ -40,7 +45,7 @@ public class SB_1 {
         System.out.println(sb2.capacity());//16
 
         sb2.append("Java");
-        sb2.append("xxxxxxxxxxxxxxx");
+        sb2.append("xxxxxxxxxxxxx");
 
         System.out.println(sb2.length());//19
         System.out.println(sb2.capacity());//34
@@ -56,12 +61,12 @@ public class SB_1 {
          */
 
         //StringBuilder olusturmanin 3. yolu
-        StringBuilder sb3 = new StringBuilder(4);
-        sb3.append("0123456789");
+        StringBuilder sb3 = new StringBuilder(20);
+        sb3.append("123667");
         System.out.println(sb3);
-        //sb3.trimToSize();
-        //System.out.println(sb3.capacity());
-        //System.out.println(sb3.length());
+        sb3.trimToSize();
+        System.out.println(sb3.capacity());
+        System.out.println(sb3.length());
 
     }
 

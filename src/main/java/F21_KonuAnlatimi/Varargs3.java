@@ -1,4 +1,4 @@
-package KonuAnlatimi;
+package F21_KonuAnlatimi;
 
 public class Varargs3 {
     public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class Varargs3 {
           (Not argument sayisi degisken olabilir)
          */
 
-        islemYap(3, 4, 5, 8, 1, 2); // 60
+        islemYap(3, 4, 5, 8, 1, 2,9); // 60
         islemYap(5, 1); // 5
         islemYap(4); // 0
         islemYap(3, 4, 5, 6); // 45
@@ -22,8 +22,7 @@ public class Varargs3 {
 
         int geriyeKalanlarToplami = 0;
 
-        for (int each : geriyeKalanlar
-        ) {
+        for (int each : geriyeKalanlar) {
 
             geriyeKalanlarToplami += each;
         }

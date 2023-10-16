@@ -1,4 +1,4 @@
-package SerbestCalisma;
+package F20;
 
 import java.util.ArrayList;
 

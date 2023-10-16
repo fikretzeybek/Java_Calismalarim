@@ -1,4 +1,4 @@
-package OrnekSoru1;
+package F22;
 
 import java.time.LocalDateTime;
 import java.time.Period;

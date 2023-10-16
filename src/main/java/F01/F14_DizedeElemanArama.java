@@ -1,4 +1,4 @@
-package F03;
+package F01;
 
 public class F14_DizedeElemanArama {
     public static void main(String[] args) {

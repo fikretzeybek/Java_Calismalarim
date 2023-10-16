@@ -1,8 +1,11 @@
-package KonuAnlatimi;
+package F21_KonuAnlatimi;
 
 public class Varargs {
 
     static void islemTest(int  ...  sayi) {
+
+        //int...sayilar = 1,2,3,7,8,9; Method icinde kullanim YOK
+
         System.out.println(sayi.length);
         System.out.println(sayi[1]);
     }

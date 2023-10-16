@@ -1,4 +1,4 @@
-package KonuAnlatimi;
+package F21_KonuAnlatimi;
 
 public class SB_S_Methodlari {
     public static void main(String[] args) {

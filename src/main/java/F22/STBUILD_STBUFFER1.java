@@ -1,4 +1,4 @@
-package OrnekSoru1;
+package F22;
 
 public class STBUILD_STBUFFER1 {
     public static void main(String[] args) {
