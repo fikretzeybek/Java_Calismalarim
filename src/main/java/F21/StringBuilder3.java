@@ -1,4 +1,4 @@
-package F21_KonuAnlatimi;
+package F21;
 
 
 public class StringBuilder3 {
@@ -11,6 +11,8 @@ public class StringBuilder3 {
         StringBuilder sb2 = new StringBuilder("Java");
 
         String str = "Java";
+        //String s = str + "J";
+        //System.out.println(s);
 
 
         System.out.println(sb1 == sb2); // false

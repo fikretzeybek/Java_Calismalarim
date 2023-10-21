@@ -1,4 +1,4 @@
-package F21_KonuAnlatimi;
+package F21;
 
 public class Varargs3 {
     public static void main(String[] args) {
