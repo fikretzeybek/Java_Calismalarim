@@ -2,14 +2,14 @@ package G_Abstract;
 
 public class UstaBasi extends Isci{
 
+    @Override
     protected int saatUcreti() {
-
-        return 15;
+        return super.saatUcreti();
     }
 
     @Override
     protected int aylikCalismaSuresi() {
-
-        return 200;
+        return super.aylikCalismaSuresi();
     }
 }
+

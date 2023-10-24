@@ -9,4 +9,5 @@ interface HasWings {
 }
 
 abstract class Falcon implements CanFly, HasWings {
+
 }

@@ -1,18 +1,16 @@
 package H_Abstract;
 
-public class JavaDataBase {
+public abstract class JavaDataBase {
 
-    public void altYapi() {
+    public abstract void altYapi();
 
-    }
+    public abstract void altYapi(String str);
 
     public void guncelleme() {
 
     }
 
-    public void guncelleme(int a){
-
-        System.out.println("istege bagli guncelleme");
+    public void guncelleme(int a) {
 
 
     }

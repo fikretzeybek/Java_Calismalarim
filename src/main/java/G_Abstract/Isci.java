@@ -4,17 +4,6 @@ public class Isci extends Muhasebe {
 
 
 
-    protected int saatUcreti() {
-
-        return 10;
-    }
-
-
-    protected int aylikCalismaSuresi() {
-
-        return 200;
-    }
-
 
     public String toString() {
         return "==Isci==" +
@@ -43,5 +32,15 @@ public class Isci extends Muhasebe {
         isci1.isim = "Hasan";
         isci1.soyisim = "Can";
         System.out.println(isci1);
+    }
+
+    @Override
+    protected int saatUcreti() {
+        return 0;
+    }
+
+    @Override
+    protected int aylikCalismaSuresi() {
+        return 0;
     }
 }

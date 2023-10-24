@@ -8,4 +8,9 @@ public class Linux extends JavaDataBase{
         System.out.println("Java Linux'ta calisiyor");
 
     }
+
+    @Override
+    public void altYapi(String str) {
+
+    }
 }

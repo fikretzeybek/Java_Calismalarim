@@ -1,9 +1,6 @@
 package H_Abstract;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-
-public class Windows extends JavaDataBase{
+public class Windows extends JavaDataBase {
 
 
     @Override
@@ -14,13 +11,15 @@ public class Windows extends JavaDataBase{
     }
 
     @Override
-    public void guncelleme() {
-
+    public void altYapi(String str) {
 
     }
 
-    public void guncelleme(int a) {
-        super.guncelleme(a);
+    @Override
+    public void guncelleme() {
+
+        System.out.println("Windows isteğe bağlı güncellemeyi aldı");
+
     }
 
 

@@ -1,6 +1,6 @@
 package G_Abstract;
 
-public  class Personel {
+public abstract class Personel {
     static final String sirketIsmi="Yildiz Celik";
     static final String sirketAdresi="Ankara / TURKEY";
 
