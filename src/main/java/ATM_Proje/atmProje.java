@@ -214,6 +214,48 @@ public class atmProje {
         }
     }
 
+    private static void sifreDegistirme() throws InterruptedException {
+
+        System.out.println("Lütfen 4 haneli şifrenizi giriniz: ");
+        String inputSifre = scanner.next();
+
+        if (!inputSifre.equals(musteriSifre)) {
+            System.out.println("Girdiğiniz şifre hatalıdır, lütfen tekrar giriniz.");
+            sifreDegistirme();
+        }
+
+        System.out.println("Yeni bir şifre oluşturunuz: ");
+        String yeniSifre1 = scanner.next();
+
+        System.out.println("Oluşturduğunuz şifrenizi tekrar giriniz: ");
+        String yeniSifre2 = scanner.next();
+
+        System.out.println("Girdiğiniz şifreler kontrol ediliyor, lütfen bekleyiniz.");
+        Thread.sleep(1000); // 1 saniye bekleme süresi
+
+        if (!yeniSifre1.equals(yeniSifre2)) {
+            System.out.println("Girdiğiniz şifreler eşleşmemektedir, lütfen tekrar deneyiniz.");
+            sifreDegistirme();
+        }
+        if (yeniSifre2.equals(inputSifre)) {
+            System.out.println("Yeni şifreniz, eski şifrenizle aynı olamaz, lütfen tekrar deneyiniz.");
+            sifreDegistirme();
+        }else{
+            musteriSifre = yeniSifre2;
+        }
+
+        System.out.println("Şifre değiştirme işlemi gerçekleştirilmiştir, şifreniz : " + musteriSifre);
+        System.out.println("Girişe yönlendiriliyorsunuz, lütfen bekleyiniz..");
+        Thread.sleep(1000);
+        musteriGiris();
+        anaEkran();
+    }
+
+    private static void cikisYap() {
+        System.out.println("=====İYİ GÜNLER DİLERİZ=====");
+        System.exit(0);
+    }
+
 
 }
 
