@@ -155,6 +155,65 @@ public class atmProje {
         anaEkran();
     }
 
+    private static void paraYatirma() throws InterruptedException {
+
+        System.out.println("Yatırmak istediğiniz tutarı lütfen giriniz : ");
+        double yatirilacakMiktar = scanner.nextDouble();
+
+        System.out.println("Yatıracağınız paraları aşağıda açılan bölüme koyunuz. \nKoydu iseniz [1] Evet'e basınız.");
+        int evetSecim = scanner.nextInt();
+        if (evetSecim == 1) {
+            bakiye += yatirilacakMiktar;
+            System.out.println("Para yatırma işleminiz başarılı bir şekilde gerçekleştirilmiştir.");
+            System.out.println("Yeni bakiyeniz: " + bakiye + " TL'dir.");
+        } else {
+            System.out.println("Para yatırma işleminiz gerçekleştirilememiştir.");
+        }
+
+        System.out.println("Başka bir işlem yapmak ister misiniz? \n[1] Evet  \n[0] Hayır");
+        int devamEtSecimi = scanner.nextInt();
+        if (devamEtSecimi == 1) {
+            anaEkran(); // Ana ekrana geri dön
+        } else {
+            cikisYap(); // Çıkış yap
+        }
+    }
+
+    private static void paraGonderme() throws InterruptedException {
+
+        System.out.println("Gönderilecek kişinin 26 haneli IBAN numarasını giriniz : ");
+        String inputIban = scanner.next();
+
+        System.out.println("Bilgileriniz kontrol ediliyor, lütfen bekleyiniz.");
+        Thread.sleep(1000); // 5 saniye bekleme süresi
+
+        if (!inputIban.equals(musteriIban)) {
+            System.out.println("Hatalı veya geçersiz IBAN numarası girdiniz. Lütfen doğru bir IBAN numarası girin.");
+            paraGonderme(); // Hatalı IBAN veya geçersiz IBAN, tekrar IBAN girişi iste
+            return; // Metodu sonlandır
+        }
+
+        System.out.println("Göndermek istediğiniz miktarı giriniz: ");
+        double gonderilenMiktar = scanner.nextDouble();
+
+        if (gonderilenMiktar > bakiye) {
+            System.out.println("Göndereceğiniz miktar bakiyenizin üstünde olamaz.");
+            // return;
+        } else {
+            bakiye -= gonderilenMiktar;
+            System.out.println("Gönderme işlemi başarılı! Yeni bakiyeniz: " + bakiye + " TL");
+        }
+
+        System.out.println("Başka bir işlem yapmak ister misiniz? \n[1] Evet  \n[0] Hayır ");
+        int devamEtSecimi = scanner.nextInt();
+
+        if (devamEtSecimi == 1) {
+            anaEkran(); // Ana ekrana geri dön
+        } else {
+            cikisYap(); // Çıkış yap
+        }
+    }
+
 
 }
 
