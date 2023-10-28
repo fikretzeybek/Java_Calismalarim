@@ -1,4 +1,4 @@
-package F23;
+package F23_MarketProje;
 
 import java.util.Scanner;
 
@@ -8,12 +8,12 @@ public class MarketProjesi {
     static double kartIndirimOrani = 0.15;
     static double toplamFiyat = 0;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         girisEkrani();
     }
 
-    private static void girisEkrani() {//Musteri karsılama ekranı
+    private static void girisEkrani() throws InterruptedException {//Musteri karsılama ekranı
         System.out.println("===== GEL&AL MARKET =====");
         System.out.println("===== HOŞGELDİNİZ =====");
         System.out.println("Lütfen alışveriş işleminiz için seçim yapınız : ");
@@ -50,7 +50,7 @@ public class MarketProjesi {
         }
     }
 
-    private static void manav() {//Manav bolumunun islemleri yapılmaktadir
+    private static void manav() throws InterruptedException {//Manav bolumunun islemleri yapılmaktadir
         String[] manavUrunleri = {"Elma", "Armut", "Muz"};
         double[] manavFiyatlari = {25, 40, 60};
         int[] manavStok = {6, 8, 5};
@@ -93,14 +93,14 @@ public class MarketProjesi {
         //Alisverise devam edilecek ise girisgirisEkrani()' na
         //edilmeyecek ise islemleri tamamlamak uzere  fisYazdir()'a yonlendirilmektedir
         if (devamMi == 1) {
-            girisEkrani();
+            manav();
         } else {
-            fisYazdir();
+            girisEkrani();
         }
     }
 
     //Yukarida yapilan aciklamalar Sarkuteri Bolumu icin de gecerlidir
-    private static void sarkuteri() {
+    private static void sarkuteri() throws InterruptedException {
         String[] sarkuteriUrunleri = {"Peynir", "Zeytin", "Salça"};
         double[] sarkuteriFiyatlari = {150, 100, 50};
         int[] sarkuteriStok = {5, 7, 10};
@@ -135,14 +135,14 @@ public class MarketProjesi {
         System.out.println("[2] Hayır");
         int devamMi = scanner.nextInt();
         if (devamMi == 1) {
-            girisEkrani();
+            sarkuteri();
         } else {
-            fisYazdir();
+            girisEkrani();
         }
     }
 
     //Yukarida yapilan aciklamalar Market Bolumu icin de gecerlidir
-    private static void market() {
+    private static void market() throws InterruptedException {
         String[] marketUrunleri = {"Süt", "Un", "Şeker"};
         double[] marketFiyatlari = {30, 50, 100};
         int[] marketStok = {15, 10, 6};
@@ -177,15 +177,15 @@ public class MarketProjesi {
         System.out.println("[2] Hayır");
         int devamMi = scanner.nextInt();
         if (devamMi == 1) {
-            girisEkrani();
+            market();
         } else {
-            fisYazdir();
+            girisEkrani();
         }
 
     }
 
     //Toplam harcama, Gel&Al_Kart indirimli toplam harcama ve fis yazdirma islemleri yapilmaktadir
-    private static void fisYazdir() {
+    private static void fisYazdir() throws InterruptedException {
         System.out.println("Gel&Al_Kart sahibi misiniz, lütfen seçim yapınız : ");
         System.out.println("[1] Evet");
         System.out.println("[2] Hayır");
@@ -200,6 +200,7 @@ public class MarketProjesi {
 
         } else {//Toplam harcama miktarinca fis yazdirilmakta ve iyi gunler dilenmektedir
             System.out.println("Fişiniz yazdırılıyor, lütfen bekleyiniz!..");
+            Thread.sleep(5000);
             System.out.println("Harcama toplamınız : " + toplamFiyat + " TL'dir.");
             System.out.println("Bizi tercih ettiğiniz için çok teşekkür eder, yine bekleriz :)");
         }

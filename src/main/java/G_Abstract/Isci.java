@@ -32,6 +32,7 @@ public class Isci extends Muhasebe {
         isci1.isim = "Hasan";
         isci1.soyisim = "Can";
         System.out.println(isci1);
+
     }
 
     @Override

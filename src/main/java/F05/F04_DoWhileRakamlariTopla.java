@@ -8,7 +8,7 @@ public class F04_DoWhileRakamlariTopla {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Tamsayı girniz:");
+        System.out.println("Tamsayı giriniz:");
         int sayi = scanner.nextInt();
         int rakam = 0;
         int rakamlarToplami = 0;
