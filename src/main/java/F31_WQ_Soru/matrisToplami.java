@@ -1,8 +1,25 @@
 package F31_WQ_Soru;
 
-public class matris2 {
+public class matrisToplami {
 
     public static void main(String[] args) {
+                   /*Bir matrisin her satırının ve her sütununun toplamını bulan Java Programı yazin
+
+         verilen matris
+            1 2 3
+            4 5 6
+            7 8 9
+            ise
+        beklenilen output
+            1. satırın toplamı: 6
+            2. satırın toplamı: 15
+            3. satırın toplamı: 24
+            1. sütunun toplamı: 12
+            2. sütunun toplamı: 15
+            3. sütunun toplamı: 18
+
+seklinde olmalidir
+                                                    */
 
         int[][] matrix = {
                 {1, 2, 3},

@@ -1,8 +1,27 @@
 package F31_WQ_Soru;
 
 
-public class matris1 {
+public class matrisTranspozunu {
     public static void main(String[] args) {
+
+
+        /*Soru 1:
+Matrisin Transpozunu Yazdir
+Bir matrisin transpozu, satırları sütunla değiştirerek bulunabilir;
+yani orijinal matrisin satırları, yeni matrisin sütunları haline gelecektir.
+verilen matris
+1 2 3
+4 5 6
+7 8 9
+ise
+Beklenilen output
+transpozu:
+1 4 7
+2 5 8
+3 6 9
+
+seklinde olmalidir*/
+
 
         int[][] matris = {
                 {1, 2, 3},
