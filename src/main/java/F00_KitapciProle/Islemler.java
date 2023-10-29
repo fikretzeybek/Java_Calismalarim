@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Islemler {
     Scanner scanner = new Scanner(System.in);
     int kitapNo = 1005;
-    static ArrayList<kitapci_project.Kitap> kitapList = new ArrayList<>(); // bu array içinde kitapclassından oluşturulan objeler tutulacak
+    public static ArrayList<kitapci_project.Kitap> kitapList = new ArrayList<>(); // bu array içinde kitapclassından oluşturulan objeler tutulacak
 
     public void kitapEkleme() {
         System.out.print("KİTAP ADI GİRİNİZ: ");
@@ -81,7 +81,7 @@ public class Islemler {
         if (kitapList.size() == 0)
             System.out.println("LİSTE BOŞ...");
         else {
-            for (Kitap each : kitapList) {
+            for (kitapci_project.Kitap each : kitapList) {
                 System.out.println(each);
             }
         }

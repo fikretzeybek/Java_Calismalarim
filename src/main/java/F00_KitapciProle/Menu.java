@@ -1,4 +1,6 @@
-package kitapci_project;
+package F00_KitapciProle;
+
+import F00_KitapciProle.Islemler;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
