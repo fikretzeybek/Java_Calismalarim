@@ -8,10 +8,10 @@ import java.util.*;
 public class atmProje {
 
     static Scanner scanner = new Scanner(System.in);
-    private static final String musteriHesapNo = "111111111111";
-    private static String musteriSifre = "aaaa";
-    private static final String musteriAdi = "Alimiz Canımız ";
-    private static final String musteriIban = "TR320010009999901234567890"; //"TR320010009999901234567890";
+    private static final String musteriHesapNo = "1";
+    private static String musteriSifre = "1";
+    private static final String musteriAdi = "Ali Can ";
+    private static final String eftIban = "TR430010001111610045010011"; //"TR430010001111610045010011";
     private static double bakiye = 5000;
     private static int girisDenemesi = 3;
     private static final Date sonBasariliGiris = new Date();
@@ -19,41 +19,42 @@ public class atmProje {
 
     public static void main(String[] args) throws InterruptedException {
 
-        //musteriGiris();
+        musteriGiris();
         anaEkran();
     }
 
-    public static void musteriGiris() throws InterruptedException {
-        System.out.println("Lütfen 12 haneli müşteri hesap numaranızı giriniz : ");
+    private static void musteriGiris() throws InterruptedException {
+        System.out.println("Lütfen 10 haneli müşteri hesap numaranızı giriniz : ");
         String inputHesapNo = scanner.next();
         while (girisDenemesi > 0) {
 
             System.out.println("Lütfen 4 haneli müşteri şifrenizi giriniz : ");
             String inputSifre = scanner.next();
 
-            System.out.println("Bilgileriniz kontrol ediliyor, lütfen bekleyiniz.");
+            System.out.println("Şifreniz kontrol ediliyor, lütfen bekleyiniz..");
 
             Thread.sleep(1000); // 5 saniye bekleme süresi
 
             if (inputHesapNo.equals(musteriHesapNo) && inputSifre.equals(musteriSifre)) {
-                System.out.println("Sayın " + musteriAdi + "hoş geldiniz.");
-                break; // Doğru giriş yapıldığında döngüyü kır
+                System.out.println("Sayın " + musteriAdi );
+                break;// Doğru giriş yapıldığında döngüyü kır
             } else {
                 girisDenemesi--;
                 System.out.println("Şifreniz hatalıdır, kalan giriş hakkınız: " + girisDenemesi);
             }
         }
-
         if (girisDenemesi == 0) {
-            System.out.println("Hesabınız başarısız 3 giriş denemesinden dolayı bloke olmuştur.");
-            cikisYap();
-        }
+            System.out.println("\nHesabınız başarısız 3 giriş denemesinden dolayı bloke olmuştur.\n");
 
+            cikisYap();
+            System.exit(0);
+
+        }
     }
 
-    public static void anaEkran() throws InterruptedException {
-        System.out.println("=====GELBANK ATM'YE HOŞGELDİNİZ=====");
-        System.out.println("===Lütfen Yapmak İstediğiniz İşlemi Seçiniz===");
+    private static void anaEkran() throws InterruptedException {
+        System.out.println("=====GELBANK ATM'YE HOŞGELDİNİZ=====\n");
+        System.out.println("===Lütfen Yapmak İstediğiniz İşlemi Seçiniz===\n");
         System.out.println("[1] Bakiye Sorgulama");
         System.out.println("[2] Para Çekme");
         System.out.println("[3] Para Yatırma");
@@ -68,20 +69,19 @@ public class atmProje {
                 bakiyeSorgula();
                 break;
             case 2:
-                paraCekme();
+                paraCek();
                 break;
             case 3:
-                paraYatirma();
+                paraYatir();
                 break;
             case 4:
-                paraGonderme();
+                paraGonder();
                 break;
             case 5:
-                sifreDegistirme();
+                sifreDegistir();
                 break;
             case 6:
                 cikisYap();
-                System.out.println("Çıkış yapılıyor. İyi günler!");
                 break;
             default:
                 System.out.println("Geçersiz işlem seçimi. Lütfen tekrar deneyin.");
@@ -101,7 +101,7 @@ public class atmProje {
 
         System.out.println("Son başarılı girişiniz : " + sonTarih.format(ikiGunOnce) + " 'dür");
 
-        System.out.println("\nHesabınızda yapılan son 5 işlem listelenmiştir:");
+        System.out.println("\nHesabınızda yapılan son 5 işlem listelenmiştir:\n");
         islemler.add("Alınan EFT ---------------> 500 TL");
         islemler.add("Karttan yapılan harcama --> 100 TL");
         islemler.add("Karttan yapılan harcama -->  50 TL");
@@ -117,13 +117,13 @@ public class atmProje {
         //}
 
         System.out.println("\nHesap bakiyeniz: " + bakiye + " TL'dir");
-        System.out.println("Ana ekrana yönlendiriliyorsunuz, lütfen bekleyiniz..");
+        System.out.println("Ana ekrana yönlendiriliyorsunuz, lütfen bekleyiniz..\n");
         Thread.sleep(1000);
         anaEkran();
 
     }
 
-    private static void paraCekme() throws InterruptedException {
+    private static void paraCek() throws InterruptedException {
 
         System.out.println("Bakiyeniz: " + bakiye + " TL");
 
@@ -133,9 +133,9 @@ public class atmProje {
 
             if (cekilecekMiktar > bakiye) {
                 System.out.println("Çekmek istediğiniz miktar bakiyenizin üzerindedir, " +
-                                   "bakiyenizin üzerinde çekim yapamazsınız.");
-                paraCekme(); // Hatalı miktar, tekrar miktar girişi iste
-                return;
+                        "bakiyenizin üzerinde çekim yapamazsınız.");
+                paraCek(); // Hatalı miktar, tekrar miktar girişi iste
+                // return;
             } else {
                 bakiye -= cekilecekMiktar;
                 System.out.println("Çekim işlemi gerçekleştirildi, bakiyeniz: " + bakiye + " TL' dir");
@@ -147,29 +147,22 @@ public class atmProje {
                 anaEkran(); // Ana ekrana geri dön
             } else {
                 cikisYap(); // Çıkış yap
+
             }
 
-        } else {
-            System.out.println("Hesabınızda yeterli bakiye bulunmadığından işleminiz yerine getirilememiştir");
         }
-        Thread.sleep(3000);
-        anaEkran();
+
     }
 
-    private static void paraYatirma() throws InterruptedException {
+    private static void paraYatir() throws InterruptedException {
 
         System.out.println("Yatırmak istediğiniz tutarı lütfen giriniz : ");
         double yatirilacakMiktar = scanner.nextDouble();
-
-        System.out.println("Yatıracağınız paraları aşağıda açılan bölüme koyunuz. \nKoydu iseniz [1] Evet'e basınız.");
-        int evetSecim = scanner.nextInt();
-        if (evetSecim == 1) {
-            bakiye += yatirilacakMiktar;
-            System.out.println("Para yatırma işleminiz başarılı bir şekilde gerçekleştirilmiştir.");
-            System.out.println("Yeni bakiyeniz: " + bakiye + " TL'dir.");
-        } else {
-            System.out.println("Para yatırma işleminiz gerçekleştirilememiştir.");
-        }
+        System.out.println("İşleminiz yapılıyor lütfen bekleyiniz..");
+        Thread.sleep(4000);
+        bakiye += yatirilacakMiktar;
+        System.out.println("Para yatırma işleminiz başarılı bir şekilde gerçekleştirilmiştir.");
+        System.out.println("Yeni bakiyeniz: " + bakiye + " TL'dir.");
 
         System.out.println("Başka bir işlem yapmak ister misiniz? \n[1] Evet  \n[0] Hayır");
         int devamEtSecimi = scanner.nextInt();
@@ -180,7 +173,7 @@ public class atmProje {
         }
     }
 
-    private static void paraGonderme() throws InterruptedException {
+    private static void paraGonder() throws InterruptedException {
 
         System.out.println("Gönderilecek kişinin 26 haneli IBAN numarasını giriniz : ");
         String inputIban = scanner.next();
@@ -188,21 +181,22 @@ public class atmProje {
         System.out.println("Bilgileriniz kontrol ediliyor, lütfen bekleyiniz.");
         Thread.sleep(1000); // 5 saniye bekleme süresi
 
-        if (!inputIban.equals(musteriIban)) {
-            System.out.println("Hatalı veya geçersiz IBAN numarası girdiniz. Lütfen doğru bir IBAN numarası girin.");
-            paraGonderme(); // Hatalı IBAN veya geçersiz IBAN, tekrar IBAN girişi iste
-            return; // Metodu sonlandır
-        }
+        if (!inputIban.equals(eftIban)) {
+            System.out.println("Hatalı veya geçersiz IBAN numarası girdiniz. Lütfen kontrol edip tekrar giriniz : ");
+            paraGonder(); // Hatalı IBAN veya geçersiz IBAN, tekrar IBAN girişi iste
 
-        System.out.println("Göndermek istediğiniz miktarı giriniz: ");
-        double gonderilenMiktar = scanner.nextDouble();
-
-        if (gonderilenMiktar > bakiye) {
-            System.out.println("Göndereceğiniz miktar bakiyenizin üstünde olamaz.");
-            // return;
         } else {
-            bakiye -= gonderilenMiktar;
-            System.out.println("Gönderme işlemi başarılı! Yeni bakiyeniz: " + bakiye + " TL");
+            System.out.println("Göndermek istediğiniz miktarı giriniz: ");
+            double gonderilenMiktar = scanner.nextDouble();
+
+            if (gonderilenMiktar > bakiye) {
+                System.out.println("Göndereceğiniz miktar bakiyenizin üstünde olamaz.");
+                paraGonder();
+            } else {
+                bakiye -= gonderilenMiktar;
+                System.out.println("Gönderme işlemi başarılı! Yeni bakiyeniz: " + bakiye + " TL");
+            }
+
         }
 
         System.out.println("Başka bir işlem yapmak ister misiniz? \n[1] Evet  \n[0] Hayır ");
@@ -215,14 +209,14 @@ public class atmProje {
         }
     }
 
-    private static void sifreDegistirme() throws InterruptedException {
+    private static void sifreDegistir() throws InterruptedException {
 
         System.out.println("Lütfen 4 haneli şifrenizi giriniz: ");
         String inputSifre = scanner.next();
 
         if (!inputSifre.equals(musteriSifre)) {
             System.out.println("Girdiğiniz şifre hatalıdır, lütfen tekrar giriniz.");
-            sifreDegistirme();
+            sifreDegistir();
         }
 
         System.out.println("Yeni bir şifre oluşturunuz: ");
@@ -236,12 +230,12 @@ public class atmProje {
 
         if (!yeniSifre1.equals(yeniSifre2)) {
             System.out.println("Girdiğiniz şifreler eşleşmemektedir, lütfen tekrar deneyiniz.");
-            sifreDegistirme();
+            sifreDegistir();
         }
         if (yeniSifre2.equals(inputSifre)) {
             System.out.println("Yeni şifreniz, eski şifrenizle aynı olamaz, lütfen tekrar deneyiniz.");
-            sifreDegistirme();
-        }else{
+            sifreDegistir();
+        } else {
             musteriSifre = yeniSifre2;
         }
 
@@ -254,7 +248,7 @@ public class atmProje {
 
     private static void cikisYap() {
         System.out.println("=====İYİ GÜNLER DİLERİZ=====");
-        System.exit(0);
+
     }
 
 
