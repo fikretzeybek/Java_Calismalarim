@@ -10,6 +10,7 @@ public class F11_NotOrtalamasi {
     public static void main(String[] args) {
 
 
+
         Scanner scanner = new Scanner(System.in);
         List<Double> notlarListesi = new ArrayList<>();
         double notlarToplami = 0;
