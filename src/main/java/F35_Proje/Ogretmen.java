@@ -10,15 +10,8 @@ public class Ogretmen {
     static Scanner scanner = new Scanner(System.in);
     static Map<String, String> ogretmenMap = new HashMap<>();
 
-    public static void ogretmenDatasi() {
-        ogretmenMap.put("12345698741", "Deniz, Nevfel, Edebiyat");
-        ogretmenMap.put("12345698742", "Samet, Yıldırım, Fizik");
-        ogretmenMap.put("12345698743", "Omer, Faruk, Kimya");
-        ogretmenMap.put("12345698744", "Mehmet, Aydemir, Kimya");
-        ogretmenMap.put("12345698745", "Berivan, Salman, İngilizce");
-    }
     public static void ogretmenMenu() {
-        String secenek ;
+        String secenek;
 
         do {
 
@@ -47,14 +40,14 @@ public class Ogretmen {
                     break;
                 case "a":
                 case "A":
-                    MMerkez.anaMenu();
+                    MMerkezi.anaMenu();
                     break;
                 default:
                     System.out.println("Lutfen gecerli bir secim yapiniz : ");
             }
 
         } while (!secenek.equalsIgnoreCase("a"));
-        MMerkez.anaMenu();
+        MMerkezi.anaMenu();
     }
 
     public static void ogretmenEkle() {
@@ -68,17 +61,18 @@ public class Ogretmen {
         String brans = scanner.nextLine();
 
         String eklenecekValue = ad + ", " + soyAd + ", " + brans;
-        ogretmenMap.put(tcNo,eklenecekValue);
+        ogretmenMap.put(tcNo, eklenecekValue);
     }
+
     public static void kimliknoIleSilme() {
         System.out.println("Silmek istediginiz kisinin Kimlik Nosunu giriniz : ");
         String girilenKimlikno = scanner.nextLine();
 
         String arananValue = ogretmenMap.remove(girilenKimlikno);
 
-        if (arananValue == null){
+        if (arananValue == null) {
             System.out.println(girilenKimlikno + "  kayitlarinizda mevcut degildir ");
-        }else System.out.println(arananValue + "  kayitlarinizdan silinmiştir");
+        } else System.out.println(arananValue + "  kayitlarinizdan silinmiştir");
 
 
     }
@@ -90,7 +84,7 @@ public class Ogretmen {
         String arananValue = ogretmenMap.get(girilenKimlikno);
         System.out.println(arananValue);
 
-        if (arananValue == null){
+        if (arananValue == null) {
             System.out.println(girilenKimlikno + "Kayitlarda mevcut degildir ");
         }
     }
@@ -98,20 +92,18 @@ public class Ogretmen {
     public static void listeYazdir() {
         Set<Map.Entry<String, String>> ogretmenEntry = ogretmenMap.entrySet();
         System.out.println("=================OGRETMEN LISTESI==========\n" +
-        "TC No           Ad         Soyad          Brans ");
+                "TC No           Ad         Soyad          Brans ");
 
-        for (Map.Entry<String, String> each :ogretmenEntry
-             ) {
+        for (Map.Entry<String, String> each : ogretmenEntry
+        ) {
             String eachKey = each.getKey();
             String eachValue = each.getValue();
 
             String[] eachValueArr = eachValue.split(", ");
-            System.out.printf("%11s    %-8s   %-8s       %s \n" , eachKey, eachValueArr[0] ,
-                                eachValueArr[1] , eachValueArr[2]);
+            System.out.printf("%11s    %-8s   %-8s       %s \n", eachKey, eachValueArr[0],
+                    eachValueArr[1], eachValueArr[2]);
 
         }
-
-
 
 
     }

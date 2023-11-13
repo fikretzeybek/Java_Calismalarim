@@ -4,8 +4,8 @@ public class _Run {
 
     public static void main(String[] args) {
 
-        Ogretmen.ogretmenDatasi();
-        MMerkez.anaMenu();
+
+        MMerkezi.anaMenu();
 
     }
 }

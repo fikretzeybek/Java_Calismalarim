@@ -2,7 +2,7 @@ package F35_Proje;
 
 import java.util.Scanner;
 
-public class MMerkez {
+public class MMerkezi {
     static Scanner scanner = new Scanner(System.in);
 
     public static void anaMenu() {

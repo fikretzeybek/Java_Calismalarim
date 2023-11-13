@@ -1,6 +1,17 @@
 package F34_Pratik_01;
 
 public class fdfd {
+    /*
+    public static void ogretmenDatasi() {
+        ogretmenMap.put("12345698741", "Deniz, Nevfel, Edebiyat");
+        ogretmenMap.put("12345698742", "Samet, Yıldırım, Fizik");
+        ogretmenMap.put("12345698743", "Omer, Faruk, Kimya");
+        ogretmenMap.put("12345698744", "Mehmet, Aydemir, Kimya");
+        ogretmenMap.put("12345698745", "Berivan, Salman, İngilizce");
+
+    }
+    F35==> Ogretmen class' i
+ */
 
 
     // bir array icerisinde aranan "data" nin
